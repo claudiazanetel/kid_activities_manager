@@ -1,0 +1,16 @@
+<html>
+   <head></head>
+
+   <body>
+      {% for group in groups %}
+         <div style="width: 33%; float:left;">
+            <h1>GRUPPO {{loop.index}}</h1>
+            {% for participant in group %}
+               <p>{{ participant.name }}</p>
+            {% endfor %}
+         </div>
+      {% endfor %}
+
+   </body>
+
+</html>
