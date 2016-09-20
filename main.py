@@ -16,7 +16,7 @@ MIXED_TYPE = 2
 
 @app.route('/')
 def hello():
-    return 'Ciao Claudia!!!'
+    return 'Ciao Claudia!!! <3'
 
 @app.route('/upload')
 def upload_action():
