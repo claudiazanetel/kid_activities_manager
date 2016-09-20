@@ -1,1 +1,5 @@
 .vagrant
+.pydevproject
+.project
+lib/
+*.pyc

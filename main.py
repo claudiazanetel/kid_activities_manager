@@ -22,6 +22,15 @@ def hello():
 def upload_action():
    return render_template('upload.html')
 
+@app.route('/weeks')
+def list_weeks():
+    query = Participant.query(projection=['week'], distinct=True)
+    weeks = []
+    for week in query.iter():
+        weeks.append(week)
+
+    return render_template('weeks.html', weeks=weeks)
+
 @app.route('/transform', methods=["POST"])
 def transform_action():
    f = request.files['csv_file']
