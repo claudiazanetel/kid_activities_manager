@@ -1,17 +1,15 @@
 @CHARSET "UTF-8";
 
+* { font-family: 'Indie Flower', cursive; }
+
 li { color: red; }
-h1 { color: blue; background-color: fuchsia; text-align: center; font-size: 50px;
-	 font-style: oblique;font-family: 'Yatra One', cursive; text-shadow: 2px 2px aqua;}
+h1 { color: #A3E0A3; text-align: center; font-size: 50px;
+	 font-style: oblique; text-shadow: 2px 2px #C2FCC2;}
 table {width: 100%;}
 
-tr:nth-child(odd) {
-    background: white;
-}
+tr:nth-child(odd) { background: #C2FCC2; }
 
-tr:nth-child(even) {
-    background: lime;
-}
-td {text-align: center; font-size: 25px; width: 50%;}
-th {font-size: 30px; background-color: #CC0066;text-shadow: 1px 1px white; 
-	font-style: oblique;font-family: 'Yatra One', cursive; }
+tr:nth-child(even) { background: #A3E0A3; }
+td {text-align: center; font-size: 25px; width: 50%; }
+th {font-size: 30px; text-shadow: 1px 1px #C2FCC2; background-color: white; 
+	font-style: oblique; color: #85B885; }
