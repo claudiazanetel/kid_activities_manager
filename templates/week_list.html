@@ -1,0 +1,22 @@
+<html>
+   <head></head>
+
+   <body>
+   <h1>Week {{ week }}</h1>
+   	<table>
+   		<tr>
+   			<th>Name</th> 
+   			<th>Date of Birth</th>
+   		</tr>
+   		
+      		{% for item in participants %}
+      		<tr>
+         	<td>{{ item.name }}</td>
+         	<td>{{ item.dob }}</td>
+         	</tr>
+      		{% endfor %}
+      	
+	</table>	
+   </body>
+
+</html>

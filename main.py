@@ -31,6 +31,20 @@ def list_weeks():
 
     return render_template('weeks.html', weeks=weeks)
 
+@app.route('/weeks/list/<week>')
+def single_week(week):
+    query = Participant.query(Participant.week == week)
+    participants = []
+    for participant in query.iter():
+        participants.append(participant)
+        
+    return render_template('week_list.html', participants=participants,week = week)
+        
+#     response = make_response(str(participants))
+#     return response    
+    
+    
+
 @app.route('/transform', methods=["POST"])
 def transform_action():
    f = request.files['csv_file']

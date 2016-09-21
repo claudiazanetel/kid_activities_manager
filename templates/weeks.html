@@ -4,7 +4,7 @@
    <body>
    	<ul>
       {% for item in weeks %}
-         <li>{{ item.week }} - elenco - <a href="/groups/{{ item.week }}/1/3">gruppi</a></li>
+         <li>{{ item.week }} - <a href="/weeks/list/{{ item.week }}">elenco</a> - <a href="/groups/{{ item.week }}/1/3">gruppi</a></li>
       {% endfor %}
 	</ul>	
    </body>
