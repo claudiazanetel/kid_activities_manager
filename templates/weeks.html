@@ -1,12 +1,13 @@
-<html>
-   <head></head>
+{% extends "base.html" %}
+{% block title %}Weeks{% endblock %}
 
-   <body>
-   	<ul>
-      {% for item in weeks %}
-         <li>{{ item.week }} - <a href="/weeks/list/{{ item.week }}">elenco</a> - <a href="/groups/{{ item.week }}/1/3">gruppi</a></li>
-      {% endfor %}
-	</ul>	
-   </body>
-
-</html>
+{% block content %}
+<ul>
+	{% for item in weeks %}
+		<li>{{ item.week }} - 
+			<a href="/weeks/list/{{ item.week }}">elenco</a> - 
+			<a href="/groups/{{ item.week }}/1/3">gruppi</a>
+		</li>
+	{% endfor %}
+</ul>
+{% endblock %}

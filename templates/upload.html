@@ -1,14 +1,11 @@
-<html>
-   <head></head>
+{% extends "base.html" %}
+{% block title %}Upload{% endblock %}
 
-   <body>
-
+{% block content %}
       <form action="/transform" method="post" enctype="multipart/form-data">
          <input type="file" name="csv_file" />
          <input type="text" name="week" />
          <input type="submit" />
       </form>
 
-   </body>
-
-</html>
+{% endblock %}

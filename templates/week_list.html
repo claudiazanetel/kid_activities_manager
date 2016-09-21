@@ -1,7 +1,7 @@
-<html>
-   <head></head>
+{% extends "base.html" %}
+{% block title %}Week list{% endblock %}
 
-   <body>
+{% block content %}
    <h1>Week {{ week }}</h1>
    	<table>
    		<tr>
@@ -17,6 +17,4 @@
       		{% endfor %}
       	
 	</table>	
-   </body>
-
-</html>
+{% endblock %}
