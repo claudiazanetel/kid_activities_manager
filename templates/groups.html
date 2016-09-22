@@ -2,12 +2,14 @@
 {% block title %}Groups{% endblock %}
 
 {% block content %}
+	<h1>I GRUPPI </h1>
       {% for group in groups %}
          <div style="width: 33%; float:left;">
-            <h1>Gruppo {{loop.index}}</h1>
+            <h2>GRUPPO {{loop.index}}</h2>
             {% for participant in group %}
-               <p>{{ participant.name }}</p>
+            <p>{{loop.index}})   {{ participant.name }}</p>  
             {% endfor %}
          </div>
       {% endfor %}
 {% endblock %}
+

@@ -16,7 +16,7 @@ MIXED_TYPE = 2
 
 @app.route('/')
 def hello():
-    return 'Ciao Claudia!!! <3'
+    return render_template('homepage.html')
 
 @app.route('/upload')
 def upload_action():

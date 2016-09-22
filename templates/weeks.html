@@ -2,6 +2,17 @@
 {% block title %}Weeks{% endblock %}
 
 {% block content %}
+<p0>
+<br>Per ogni settimana caricata nel database puoi vedere l'elenco dei bambini presenti in quella settimana cliccando su <span class="parole">elenco</span> qui sotto.
+<br> Oppure se clicchi su <span class="parole">gruppi</span> qui sotto il sito genera 3 gruppi in base all'et&agrave dei bambini presenti in quella settimana.</br>
+</p0>
+
+<p1> 
+<br>Settimane inserite:
+</p1>
+
+
+
 <ul>
 	{% for item in weeks %}
 		<li>{{ item.week }} - 
