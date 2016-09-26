@@ -18,6 +18,10 @@ MIXED_TYPE = 2
 def hello():
     return render_template('homepage.html')
 
+@app.route('/<game>')
+def showGame(game):
+    return render_template('games/'+game)
+
 @app.route('/upload')
 def upload_action():
    return render_template('upload.html')
@@ -54,8 +58,9 @@ def transform_action():
    stream = io.StringIO(f.stream.read().decode("UTF8", errors='ignore'), newline=None)
    csv_content = csv.reader(stream)
    result = transform(csv_content, 1, 4, week)
-   response = make_response(str(result))
-   return response
+   return render_template('transform.html')
+#    response = make_response(str(result))
+#    return response
 
 def transform(file_content, name_index, date_index, week):
    result = []
