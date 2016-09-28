@@ -18,13 +18,13 @@ MIXED_TYPE = 2
 def hello():
     return render_template('homepage.html')
 
-@app.route('/<game>')
-def showGame(game):
-    return render_template('games/'+game)
+@app.route('/giochi/<type>/<game>')
+def showGame(game, type):
+    return render_template('games/'+type+'/'+game)
 
 @app.route('/upload')
 def upload_action():
-   return render_template('upload.html')
+    return render_template('upload.html')
 
 @app.route('/weeks')
 def list_weeks():
