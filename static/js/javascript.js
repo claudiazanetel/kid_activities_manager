@@ -13,7 +13,6 @@ for (i = 0; i < acc.length; i++) {
 
 function create_groups() {
 	    
-	  //}​​
 	  var file = document.getElementById("files").value;
 	  var n_group = document.getElementById("num_groups").value;
 	  if(document.getElementById('type_aged').checked) {
