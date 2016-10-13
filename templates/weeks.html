@@ -8,9 +8,30 @@
 </p>
 
 <h4> 
-Settimane inserite:
+File inseriti:
 </h4>
 
+
+{% for item in weeks %}	
+<input class="accordion" type="button" id = "files" value ="{{ item.week }}">
+<div class="panel">
+	<form>
+	<br>Tipologia di gruppo<br/>
+	<input id = "type_aged" type="radio" name="type" value ="aged"> gruppi per et&agrave<br/>
+  	<input id = "type_mix" type="radio" name="type" value="mix">gruppi misti<br/><br/>
+  	
+	<fieldset>
+	Numero di gruppi<br/>
+	<input type = "text" name = "n_groups" id = "num_groups" required><br/>
+						
+	</fieldset>
+	<input type="button" onclick="create_groups()" value="Submit">
+</form>
+  
+</div>
+
+
+{% endfor %}
 
 
 <ul>
@@ -21,4 +42,28 @@ Settimane inserite:
 		</li>
 	{% endfor %}
 </ul>
+
+<!--  <form>
+	Seleziona il file <br/>
+	<select name="file" id="file">
+	<option disabled selected value> -- seleziona file -- </option>
+	{% for item in weeks %}
+		<option value="{{ item.week }}"> {{ item.week }}</option>
+	{% endfor %}
+	</select>
+	<br>Tipologia di gruppo<br/>
+	<input id = "type_aged" type="radio" name="type" value ="aged"> gruppi per et&agrave<br/>
+  	<input id = "type_mix" type="radio" name="type" value="mix">gruppi misti<br/><br/>
+  	
+	<fieldset>
+	Numero di gruppi<br/>
+	<input type = "text" name = "n_groups" id = "num_groups" required><br/>
+						
+	</fieldset>
+	<input type="button" onclick="create_groups()" value="Submit">
+</form>-->
+
+
+
+	
 {% endblock %}
