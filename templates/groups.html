@@ -4,7 +4,7 @@
 {% block content %}
 	<h1>I GRUPPI </h1>
       {% for group in groups %}
-         <div style="width: 33%; float:left;">
+         <div id = "groups">
             <h2>GRUPPO {{loop.index}}</h2>
             {% for participant in group %}
             <h3>{{loop.index}})   {{ participant.name }}</h3>  

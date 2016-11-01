@@ -8,17 +8,17 @@ h1 {color: #009f18; text-align: center; font-size: 60px;
 	 font-style: oblique; text-shadow: 4px 4px #e7fee7;}
 div#footer {clear: both; padding: 50px 0px 0px 0px}
 div#menu {text-align:center;}
-a.link_homepage {text-decoration:none; font-size:30px; display:inline-block; margin:10px 50px 20px 50px; padding: 10px 50px 10px 50px; 	
-  border-radius: 10px; background-color:#85B885; color: white; form {text-align: center; font-size: 80px;}}	
+a.link_homepage {text-decoration:none; font-size:250%; display:inline-block; margin:1% 2% 2% 2%; padding: 1% 4% 1% 4%; 	
+  border-radius: 10px; background-color:#85B885; color: white;}	
 img.center {display: block; margin-left: auto; margin-right: auto;}
 
 form {text-align: center; width: 100%; height: 300px;}
 
 /* CSS per /homepage */
 h4.spiegazione {font-weight: bold; font-size: 35px; color:#009f18; text-align: center;}	
-h5 {line-height: 0%; color:#009f18;font-size: 30px; text-align: center;  background-size: 100% ;}
+h5 {margin-bottom: 0%; padding-bottom: 0%; color:#009f18;font-size: 30px; text-align: center;}
 
-form {color:#009f18;font-size: 25px; text-align: center;}
+form {color:#009f18; font-size: 250%; text-align: center;}
 
 /* CSS per /homepage/games */
 
@@ -49,11 +49,13 @@ h2 {font-size: 30px; text-shadow: 1px 1px #C2FCC2; background-color: #85B885;
 h3 {color:#009f18;font-size: 20px; text-align: center;  background-size: 100% ;
   margin:0px 0px 0px 44px; width: 80%;}
   
+div#groups {width: 100%; margin-left: 5%; margin-right: 5%;}
+  
 h3:nth-child(odd) { background: #C2FCC2;}
 h3:nth-child(even) { background: #A3E0A3; }
 
-input.accordion {background-color: #C2FCC2; color: #009f18; cursor: pointer; padding: 18px; width: 100%;
-    text-align: left; border: none; outline: none; transition: 0.4s; font-size: 150%; }
+input.accordion {background-color: #C2FCC2; color: #009f18; cursor: pointer; padding: 2%; width: 100%;
+    text-align: center; border: none; outline: none; transition: 0.4s; font-size: 250%; }
 
 input.accordion.active, input.accordion:hover { background-color: #A3E0A3;;}
 
@@ -69,9 +71,20 @@ input.accordion.active:after {
     content: "\2796"; /* Unicode character for "minus" sign (-) */
 }
 
-div.panel {padding: 0 18px; background-color: white; display: none;}
+div.panel {background-color: white; display: none;}
 
 
-div.panel.show { display: block;}
+div.panel.show {display: block; padding: 2% 2% 30% 2%;}
+input {text-align: center; font-size: 85%;}
 
+/*@media (min-width: 600px)  */
+@media only screen and (min-device-width: 480px){
+	
+	div#groups {width: 33%; float:left; margin-right: 0; margin-left: 0; }
+	div.panel.show {display: block; padding: 2% 2% 10% 2%;}
+	input.accordion {text-align: left; font-size: 150%;}
+	form {font-size: 150%}
+	a.link_homepage {text-decoration:none; font-size:120%; display:inline-block; margin:1% 2% 2% 2%; padding: 1% 4% 1% 4%; 	
+    border-radius: 10px; background-color:#85B885; color: white;}		
+}
 
