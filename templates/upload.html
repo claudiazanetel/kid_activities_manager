@@ -2,18 +2,19 @@
 {% block title %}Upload{% endblock %}
 
 {% block content %}
-	  <p><br>Inserisci il file in formato .csv e nomina il file come vuoi tu!</p>
-	  <p><span class="parole">Attenzione!!!</span> Il formato .csv deve avere i nomi del bambini nella seconda colonna e la data di nascita nella quarta colonna nel formato GG/MM/AAAA.
-	  <br></br><img src="/static/image/excell_campi.JPG" alt="excell colonne" style="width:500px;height:500px;"align="bottom" class="center">
-	  <br>Per salvare in formato .csv basta fare salva con nome del file excell e scegliere il formato .csv.<br>
-	  <img src="/static/image/file cvs.png" alt="salvare file cvs" style="width:500px;height:300px;"align="bottom" class="center"><br></br></p>
+	 <p><br>Inserisci il file in formato .csv e nomina il file come vuoi tu!</p>
+	 <p><span class="parole">Attenzione!!!</span> Il formato .csv deve avere i nomi del bambini nella seconda colonna e la data di nascita nella quarta colonna nel formato GG/MM/AAAA.
+	 <br></br><img src="/static/image/excell_campi.JPG" alt="excell colonne" style="width:500px;height:500px;"align="bottom" class="center">
+	 <br>Per salvare in formato .csv basta fare salva con nome del file excell e scegliere il formato .csv.<br>
+	 <br><img src="/static/image/file cvs.png" alt="salvare file cvs" style="width:500px;height:300px;"align="bottom" class="center"><br></br></p>
 	  
-	 
-      <form action="/transform" method="post" enctype="multipart/form-data">
-         <input type="file" name="csv_file" />
-         <input type="text" name="week" />
-         <input type="submit" />
-      </form>
+	 <div> 	 
+     	<form action="/transform" method="post" enctype="multipart/form-data">
+     		<input type="file" name="csv_file" /><br>
+     		<input type="text" name="week" />
+     		<input type="submit" />
+     	</form>
+     </div>
 
 {% endblock %}
 
