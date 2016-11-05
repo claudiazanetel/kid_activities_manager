@@ -14,8 +14,7 @@ img.center {display: block; margin-left: auto; margin-right: auto;}
 
 form {text-align: center; width: 100%; height: 300px;}
 
-/* CSS per /homepage */
-h4.spiegazione {font-weight: bold; font-size: 35px; color:#009f18; text-align: center;}	
+/* CSS per /homepage */	
 h5 {margin-bottom: 0%; padding-bottom: 0%; color:#009f18;font-size: 30px; text-align: center;}
 
 form {color:#009f18; font-size: 250%; text-align: center;}
@@ -77,14 +76,60 @@ div.panel {background-color: white; display: none;}
 div.panel.show {display: block; padding: 2% 2% 30% 2%;}
 input {text-align: center; font-size: 85%;}
 
+/*new structure with boostrap*/
+
+body{
+    padding:60px 0px 0px 0px;
+    z-index:0;
+}
+.navbar-inverse {
+     background: #A3E0A3;
+     color: #007d13;
+}
+
+.navbar .navbar-nav {
+  display: inline-block;
+  float: none;
+  vertical-align: top;
+  font-size: center;
+}
+
+.navbar .navbar-collapse {
+  text-align: center;
+  font-size: 30px;
+}
+
+.navbar .nav > li > a {
+    text-decoration: none;
+    color:  #007d13;
+    margin-left: 50px;
+
+}
+
+.navbar-inverse .navbar-nav > .active > a,
+.navbar-inverse .navbar-nav > .active > a:hover,
+.navbar-inverse .navbar-nav > .active > a:focus {
+    color: #007d13;
+    background: #A3E0A3;
+}
+
+.glyphicon-home {
+    font-size: 20px;
+    width: 1em;
+    display:inline-block;
+    margin: -0.5em 5px auto 0px; 
+}
+
+
+
+
+
 /*@media (min-width: 600px)  */
 @media only screen and (min-device-width: 480px){
 	
 	div#groups {width: 33%; float:left; margin-right: 0; margin-left: 0; }
 	div.panel.show {display: block; padding: 2% 2% 10% 2%;}
 	input.accordion {text-align: left; font-size: 150%;}
-	form {font-size: 150%}
-	a.link_homepage {text-decoration:none; font-size:120%; display:inline-block; margin:1% 2% 2% 2%; padding: 1% 4% 1% 4%; 	
-    border-radius: 10px; background-color:#85B885; color: white;}		
+	form {font-size: 150%}		
 }
 
