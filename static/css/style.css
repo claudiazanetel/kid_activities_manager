@@ -3,10 +3,10 @@
 /* Stile uguale in tutte le pagine del sito */
 * { font-family: 'Indie Flower', cursive; }
 
-body {background-color: #e7fee7;}
+body {background-color: #e7fee7; width: 100%;}
 h1 {color: #009f18; text-align: center; font-size: 60px;
 	 font-style: oblique; text-shadow: 4px 4px #e7fee7;}
-div#footer {clear: both; padding: 50px 0px 0px 0px}
+div#footer {clear: both; padding: 50px 0px 0px 0px;}
 div#menu {text-align:center;}
 a.link_homepage {text-decoration:none; font-size:250%; display:inline-block; margin:1% 2% 2% 2%; padding: 1% 4% 1% 4%; 	
   border-radius: 10px; background-color:#85B885; color: white;}	
@@ -29,7 +29,7 @@ tr:nth-child(odd) { background: #C2FCC2; }
 tr:nth-child(even) { background: #A3E0A3; }
 td {text-align: center; font-size: 25px; width: 50%; }
 th {font-size: 30px; text-shadow: 1px 1px #C2FCC2; background-color: #85B885; 
-	font-style: oblique; color: white; }
+	font-style: oblique; color: white; text-align: center; }
 
 /* CSS per /weeks */
 span.parole {text-decoration: underline; color: #008814 ; font-weight: bold;}
@@ -44,16 +44,16 @@ a {text-decoration: underline; color: #008814 ; font-weight: bold;}
 input {color:#007d13;font-size: 25px;}
 input[type=file] {
     margin: 0 auto;
-    size:80;
+    font-size: 50%;
 }
 
 /* CSS per /groups */
 h2 {font-size: 30px; text-shadow: 1px 1px #C2FCC2; background-color: #85B885; 
-	font-style: oblique; color: white; text-align: center; width: 80%;  margin: 30px 0px 0px 44px ;}
+	font-style: oblique; color: white; text-align: center; width: 80%;  margin: 30px 0px 0px 34px ;}
 h3 {color:#009f18;font-size: 20px; text-align: center;  background-size: 100% ;
-  margin:0px 0px 0px 44px; width: 80%;}
+  margin:0px 0px 0px 34px; width: 80%;}
   
-div#groups {width: 100%; margin-left: 5%; margin-right: 5%;}
+div#groups {width: 100%; position: relative;}
   
 h3:nth-child(odd) { background: #C2FCC2;}
 h3:nth-child(even) { background: #A3E0A3; }
@@ -67,13 +67,13 @@ input.accordion.active, input.accordion:hover { background-color: #A3E0A3;;}
 div.panel {background-color: white; display: none;}
 
 
-div.panel.show {display: block; padding: 2% 2% 30% 2%;}
-input {text-align: center; font-size: 85%;}
+div.panel.show {display: block; padding: 5% 2% 5% 2%; height: 100%; position: relative; }
+input {text-align: center; font-size: 70%;}
 
 /*new structure with boostrap*/
 
 body{
-    padding:60px 0px 0px 0px;
+    padding:30px 0px 0px 0px;
     z-index:0;
 }
 .navbar-inverse {
@@ -129,7 +129,7 @@ img {
 @media only screen and (min-device-width: 480px){
 	
 	div#groups {width: 33%; float:left; margin-right: 0; margin-left: 0; }
-	div.panel.show {display: block; padding: 2% 2% 10% 2%;}
+	div.panel.show {display: block; padding: 2% 2% 10% 2%; height:80%;}
 	input.accordion {text-align: left; font-size: 150%;}
 	form {font-size: 150%}		
 }

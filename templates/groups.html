@@ -2,6 +2,8 @@
 {% block title %}Groups{% endblock %}
 
 {% block content %}
+<div class="row row row-content">
+    <div class="col-xs-12" >
 	<h1>I GRUPPI </h1>
       {% for group in groups %}
          <div id = "groups">
@@ -11,5 +13,7 @@
             {% endfor %}
          </div>
       {% endfor %}
+</div>
+</div>
 {% endblock %}
 

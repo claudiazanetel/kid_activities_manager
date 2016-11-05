@@ -2,6 +2,8 @@
 {% block title %}Weeks{% endblock %}
 
 {% block content %}
+<div class="row row row-content">
+<div class="col-xs-12" >
 <p>
 <br>Per ogni file caricato puoi vedere l'elenco dei bambini presenti in quella settimana.
 <br> Oppure puoi creare i gruppi come vuoi tu!</br>
@@ -18,12 +20,14 @@ File inseriti:
 	<a href="/weeks/list/{{ item.week }}">Elenco</a><br>
 	<br>Tipologia di gruppo:<br/>
 	<input id = "type_aged" type="radio" name="type" value ="aged"> gruppi per et&agrave<br/>
-  	<input id = "type_mix" type="radio" name="type" value="mix">gruppi misti<br/><br/>
+  	<input id = "type_mix" type="radio" name="type" value="mix"> gruppi misti<br/><br/>
   	Numero di gruppi:<br/>
 	<input type = "number" name = "n_groups" id = "num_groups" value = "1" min="0" max="99" step= "1" required><br>
 	<br><input type="button" onclick="create_groups()" value="Crea i gruppi"><br>
 	</form> 
 </div>
 {% endfor %}
+</div>
+</div>
 	
 {% endblock %}
