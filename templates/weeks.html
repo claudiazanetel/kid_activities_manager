@@ -4,30 +4,51 @@
 {% block content %}
 <div class="row row row-content">
 <div class="col-xs-12" >
-<p>
-<br>Per ogni file caricato puoi vedere l'elenco dei bambini presenti in quella settimana.
-<br> Oppure puoi creare i gruppi come vuoi tu!</br>
-</p>
+	<p>
+		<br>Per ogni file caricato puoi vedere l'elenco dei bambini presenti in quella settimana.
+		<br> Oppure puoi creare i gruppi come vuoi tu!</br>
+	</p>
 
-<h4> 
-File inseriti:
-</h4>
+	<h4> 
+		File inseriti :
+	</h4>
 
-{% for item in weeks %}	
-<input class="accordion" type="button" id = "files" value ="{{ item.week }}">
-<div class="panel">
-	<form>
-	<a href="/weeks/list/{{ item.week }}">Elenco</a><br>
-	<br>Tipologia di gruppo:<br/>
-	<input id = "type_aged" type="radio" name="type" value ="aged"> gruppi per et&agrave<br/>
-  	<input id = "type_mix" type="radio" name="type" value="mix"> gruppi misti<br/><br/>
-  	Numero di gruppi:<br/>
-	<input type = "number" name = "n_groups" id = "num_groups" value = "1" min="0" max="99" step= "1" required><br>
-	<br><input type="button" onclick="create_groups()" value="Crea i gruppi"><br>
-	</form> 
+	{% for item in weeks %}	
+		<input class="accordion" type="button" id = "files" value ="{{ item.week }}">
+			<div class="panel">
+				<form>
+					<a href="/weeks/list/{{ item.week }}">Elenco</a>
+					<br></br>
+					<select class="custom-select" id = "type_group" required>
+			  			<option>Tipologia del gruppo</option>
+			  			<option id = "type_aged" type="radio" name="type" value ="aged" > Gruppi per et&agrave</option>
+			  			<option id = "type_mix" type="radio" name="type" value="mix" > Gruppi misti</option>
+					</select>
+					<br></br>	
+					<select class="custom-select" id = "num_groups" required >
+						<option>Numero di gruppi</option>
+				    	<option value ="1">1</option>
+				    	<option value="2">2</option>
+				    	<option value="3">3</option>
+				    	<option value="4">4</option>
+				    	<option value="5">5</option>
+				    	<option value="6">6</option>
+				    	<option value="7">7</option>
+				    	<option value="8">8</option>
+				    	<option value="9">9</option>
+				    	<option value="10">10</option>
+					</select>
+				
+					<br></br>
+					<input type="button" onclick="create_groups()" value="Crea i gruppi"><br>
+				</form> 
+			</div>
+	{% endfor %}
+
 </div>
-{% endfor %}
 </div>
-</div>
+
+
+
 	
 {% endblock %}
