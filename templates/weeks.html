@@ -18,8 +18,7 @@
 	  <div class="panel panel-default">
 	    <div class="panel-heading">
 	      <h4 class="panel-title">
-	        <a data-toggle="collapse" data-parent="#accordion" href="#{{ item.week }}" id="week" onclick="File_save()"
-	        >{{ item.week }}</a>
+	        <a data-toggle="collapse" data-parent="#accordion" href="#{{ item.week }}">{{ item.week }}</a>
 	      </h4>
 	    </div>
 	    <div id="{{ item.week }}" class="panel-collapse collapse">
@@ -31,16 +30,16 @@
 					<div class="form-group">
 						<div class="col-lg-6 col-lg-offset-3">
 		  					<label for="type_group">Crea i gruppi come vuoi tu:</label>
-		  					<select class="form-control" id="type_group" required="required" >
+		  					<select class="form-control group_type" required="required" >
 		  						<option value="undefined">scegli la tipologia dei gruppi</option>
-		    					<option id = "type_aged" type="radio" name="type" value ="aged" > Gruppi per et&agrave</option>
-							    <option id = "type_mix" type="radio" name="type" value="mix" > Gruppi misti</option>
+		    					<option type="radio" name="type" value ="aged" > Gruppi per et&agrave</option>
+							    <option type="radio" name="type" value="mix" > Gruppi misti</option>
 							</select>
 						</div>
 						</div>
 					<div class="form-group">
 						<div class="col-lg-6 col-lg-offset-3">
-		  					<select class="form-control" id="num_groups" required="required" >
+		  					<select class="form-control num_groups" required="required" >
 		  						<option value ="undefined">scegli quanti gruppi</option>
 						    	<option value ="1">1</option>
 						    	<option value="2">2</option>
@@ -56,7 +55,8 @@
 						</div>
 					</div>
 					<div class="form-group">
-						<input type="button" onclick="create_groups()" value="Crea i gruppi"><br>
+						<input type="button" onclick="create_groups(this, '{{ item.week }}')" value="Crea i gruppi">
+						<br>
 					</div>		
 				</form>
 			</div> 

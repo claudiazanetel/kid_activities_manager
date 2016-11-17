@@ -11,30 +11,11 @@ for (i = 0; i < acc.length; i++) {
 }
 }*/
 
-//(function() {
-  //('.collapse').on('shown.bs.collapse', function (e) {
-       // console.log('Calling #' + e.currentTarget.id);
-    //})
-//})
 
-//$(function() {
-  //$('.collapse').on('shown.bs.collapse', function (e) {
-        //$("#log").text(('Calling #' + e.currentTarget.id));
-    //})
-//})
-
-//var file = document.getElementById("files").value;
-
-function File_save(){
-	alert(this.document.getElementById("week").innerHTML)
-}
-
-
-function create_groups() {
-	  //var file = document.getElementsByClassName('panel-title')[0].id;
-	  var file = document.getElementById("week").innerHTML;
-	  var n_group = document.getElementById("num_groups").value;
-	  var t_group = document.getElementById("type_group").value;
+function create_groups(button, file) {
+	  var form = button.parentNode.parentNode;
+	  var n_group = form.getElementsByClassName("num_groups")[0].value;
+	  var t_group = form.getElementsByClassName("group_type")[0].value;
 	  if (t_group =='aged'){
 		  var type = 1
 	  }
@@ -49,7 +30,6 @@ function create_groups() {
 			//var type = 2
 	  //}
       
-	  alert(file)
 	  //document.write(type + "  " + n_group );
 	  if (type == undefined){
 		  alert('Attenzione! Ti sei dimenticato di selezionare il tipo di gruppo o il numero di gruppi');
