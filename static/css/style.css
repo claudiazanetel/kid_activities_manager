@@ -139,8 +139,6 @@ body{
 	div#groups {width: 33%; float:left; margin-right: 0; margin-left: 0; }
 	form {font-size: 150%}
 	label {font-size: 100%;}
-	select {color:#009f18 !important; font-size: 80% !important;
-}
+	select {color:#009f18 !important; font-size: 80% !important;}
 
 }
-
