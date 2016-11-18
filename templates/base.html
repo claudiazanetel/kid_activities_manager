@@ -1,20 +1,20 @@
 <html lang="it">
-	<head>
-		<meta charset="UTF-8">
-    	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-    	<meta name="viewport" content="width=device-width, initial-scale=1">
-		<title>{% block title %}{% endblock %} - Gioca Estate</title>
-		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" 
-			integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-		
-		<link href="https://fonts.googleapis.com/css?family=Indie+Flower" rel="stylesheet">
-		
-		<link href="/static/css/style.css" rel="stylesheet" type="text/css">
-		
-	</head>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>{% block title %}{% endblock %} - Gioca Estate</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" 
+            integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+        
+        <link href="https://fonts.googleapis.com/css?family=Indie+Flower" rel="stylesheet">
+        
+        <link href="/static/css/style.css" rel="stylesheet" type="text/css">
+        
+    </head>
 
-	<body>
-		<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+    <body>
+        <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
         <div class="container">
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
@@ -31,33 +31,30 @@
                     <li><a href="/upload">Carica file</a></li>
                     <li><a href="/weeks">File inseriti</a></li>
                 </ul>
-<<<<<<< HEAD
                 <ul class="nav navbar-nav navbar-right">
                     <li><a data-toggle="modal" data-target="#loginModal">
                     <span class="glyphicon glyphicon-log-in"></span> Login</a>
                     </li>
                </ul>
-=======
->>>>>>> 73842e1700717f7b30ad4184b0e00286507c0465
             </div>
         </div>
-    	</nav> 
-    	
-    	<div class="container" id="content">{% block content %}{% endblock %}</div>
+        </nav> 
+        
+        <div class="container" id="content">{% block content %}{% endblock %}</div>
 
-		<footer id="footer">
-			{% block footer %}
-			&copy; Copyright 2016 by Claudia Zanetel.
-			{% endblock %}
-		</footer>
-		
-   		<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-    	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-    	<!-- Include all compiled plugins (below), or include individual files as needed -->
-    	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script> 
-    	<script src="/static/js/javascript.js"></script>
+        <footer id="footer">
+            {% block footer %}
+            &copy; Copyright 2016 by Claudia Zanetel.
+            {% endblock %}
+        </footer>
+        
+        <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+        <!-- Include all compiled plugins (below), or include individual files as needed -->
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script> 
+        <script src="/static/js/javascript.js"></script>
    
 
-	</body>
+    </body>
 
 </html>

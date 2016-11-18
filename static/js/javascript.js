@@ -11,7 +11,6 @@ for (i = 0; i < acc.length; i++) {
 }
 }*/
 
-<<<<<<< HEAD
 function get_value(name_file){
     var x=document.getElementById('modal_file');
     x.setAttribute('value', name_file);
@@ -19,10 +18,6 @@ function get_value(name_file){
 }
 function create_groups(button) {
 	  var file = document.getElementById('modal_file').value;
-=======
-
-function create_groups(button, file) {
->>>>>>> 73842e1700717f7b30ad4184b0e00286507c0465
 	  var form = button.parentNode.parentNode;
 	  var n_group = form.getElementsByClassName("num_groups")[0].value;
 	  var t_group = form.getElementsByClassName("group_type")[0].value;
@@ -43,20 +38,12 @@ function create_groups(button, file) {
 	  //document.write(type + "  " + n_group );
 	  if (type == undefined){
 		  alert('Attenzione! Ti sei dimenticato di selezionare il tipo di gruppo o il numero di gruppi');
-<<<<<<< HEAD
 		  //location.href = "/weeks";
-=======
-		  location.href = "/weeks";
->>>>>>> 73842e1700717f7b30ad4184b0e00286507c0465
 	  }
 	  
 	  else if (n_group == 'undefined'){
 		  alert('Attenzione! Ti sei dimenticato di selezionare il tipo di gruppo o il numero di gruppi');
-<<<<<<< HEAD
 		  //location.href = "/weeks";
-=======
-		  location.href = "/weeks";
->>>>>>> 73842e1700717f7b30ad4184b0e00286507c0465
 	  }
 
 	  else{
