@@ -1,5 +1,6 @@
 @CHARSET "UTF-8";
 
+
 /* Stile uguale in tutte le pagine del sito */
 * { font-family: 'Indie Flower', cursive; }
 
@@ -132,6 +133,35 @@ body{
     padding: 50px 0px 50px 0px;
 }
 
+.modal-title{
+	font-size: 200%;
+	text-align: center;
+}
+
+.btn-social{
+	text-decoration: none;
+	text-align: center;
+}
+
+.modal-body {
+    height: 70%;
+    overflow-y: auto;
+}
+
+.close {
+	font-size: 40px;
+	
+}
+
+.forget_ps{
+	font-size: 80%;
+	text-decoration: none;
+}
+
+.forget_ps:hover{
+	text-decoration: underline;
+	color:#007d13;
+}
 
 /*@media (min-width: 600px)  */
 @media only screen and (min-device-width: 480px){
