@@ -3,10 +3,14 @@
 /* Stile uguale in tutte le pagine del sito */
 * { font-family: 'Indie Flower', cursive; }
 
-body {background-color: #e7fee7;}
+body {background-color: #e7fee7; width: 100%;}
 h1 {color: #009f18; text-align: center; font-size: 60px;
 	 font-style: oblique; text-shadow: 4px 4px #e7fee7;}
-div#footer {clear: both; padding: 50px 0px 0px 0px}
+<<<<<<< HEAD
+footer#footer {clear: both; padding: 50px 0px 0px 0px; margin-left: 10px; margin-bottom: 10px;}
+=======
+footer#footer {clear: both; padding: 50px 0px 0px 0px;}
+>>>>>>> 73842e1700717f7b30ad4184b0e00286507c0465
 div#menu {text-align:center;}
 a.link_homepage {text-decoration:none; font-size:250%; display:inline-block; margin:1% 2% 2% 2%; padding: 1% 4% 1% 4%; 	
   border-radius: 10px; background-color:#85B885; color: white;}	
@@ -15,7 +19,7 @@ img.center {display: block; margin-left: auto; margin-right: auto;}
 form {text-align: center; width: 100%; height: 300px;}
 
 /* CSS per /homepage */
-h4.spiegazione {font-weight: bold; font-size: 35px; color:#009f18; text-align: center;}	
+h4.spiegazione {font-size: 30px; color:#009f18; text-align: center;}	
 h5 {margin-bottom: 0%; padding-bottom: 0%; color:#009f18;font-size: 30px; text-align: center;}
 
 form {color:#009f18; font-size: 250%; text-align: center;}
@@ -29,7 +33,7 @@ tr:nth-child(odd) { background: #C2FCC2; }
 tr:nth-child(even) { background: #A3E0A3; }
 td {text-align: center; font-size: 25px; width: 50%; }
 th {font-size: 30px; text-shadow: 1px 1px #C2FCC2; background-color: #85B885; 
-	font-style: oblique; color: white; }
+	font-style: oblique; color: white; text-align: center; }
 
 /* CSS per /weeks */
 span.parole {text-decoration: underline; color: #008814 ; font-weight: bold;}
@@ -42,49 +46,145 @@ a {text-decoration: underline; color: #008814 ; font-weight: bold;}
 /* CSS per /upload */
 
 input {color:#007d13;font-size: 25px;}
+input[type=file] {
+    margin: 0 auto;
+    font-size: 50%;
+}
 
 /* CSS per /groups */
 h2 {font-size: 30px; text-shadow: 1px 1px #C2FCC2; background-color: #85B885; 
-	font-style: oblique; color: white; text-align: center; width: 80%;  margin: 30px 0px 0px 44px ;}
+	font-style: oblique; color: white; text-align: center; width: 80%;  margin: 30px 0px 0px 34px ;}
 h3 {color:#009f18;font-size: 20px; text-align: center;  background-size: 100% ;
-  margin:0px 0px 0px 44px; width: 80%;}
+  margin:0px 0px 0px 34px; width: 80%;}
   
-div#groups {width: 100%; margin-left: 5%; margin-right: 5%;}
+div#groups {width: 100%; position: relative;}
   
 h3:nth-child(odd) { background: #C2FCC2;}
 h3:nth-child(even) { background: #A3E0A3; }
 
-input.accordion {background-color: #C2FCC2; color: #009f18; cursor: pointer; padding: 2%; width: 100%;
-    text-align: center; border: none; outline: none; transition: 0.4s; font-size: 250%; }
+<<<<<<< HEAD
+=======
+/*input.accordion {background-color: #C2FCC2; color: #009f18; cursor: pointer; padding: 2%; width: 100%;
+    text-align: center; border: none; outline: none; transition: 0.4s; font-size: 250%; }*/
 
-input.accordion.active, input.accordion:hover { background-color: #A3E0A3;;}
+/*input.accordion.active, input.accordion:hover { background-color: #A3E0A3;;}*/
 
-input.accordion:after {
-    content: '\02795'; /* Unicode character for "plus" sign (+) */
-    font-size: 13px;
-    color: #777;
-    float: right;
-    margin-left: 5px;
+
+/*div.panel {background-color: white; display: none;}*/
+
+
+/*div.panel.show {display: block; padding: 5% 2% 5% 2%; height: 100%; position: relative; }
+input {text-align: center; font-size: 70%;}*/
+
+>>>>>>> 73842e1700717f7b30ad4184b0e00286507c0465
+/*new structure with boostrap*/
+
+.panel-title {
+	text-align: center; font-size: 190%; color:#009f18;
 }
 
-input.accordion.active:after {
-    content: "\2796"; /* Unicode character for "minus" sign (-) */
+.panel-body{
+	margin: auto;
 }
 
-div.panel {background-color: white; display: none;}
+label {
+	font-size: 80%;
+}
+
+select {
+    color:#009f18 !important;
+    font-size: 50% !important;
+    /*padding-left: 35% !important;*/
+}
+
+select option{
+	 font-size: 150%; color:#009f18;
+}
+<<<<<<< HEAD
+option:checked { font-weight: bold !important; }
+=======
+
+>>>>>>> 73842e1700717f7b30ad4184b0e00286507c0465
 
 
-div.panel.show {display: block; padding: 2% 2% 30% 2%;}
-input {text-align: center; font-size: 85%;}
 
+body{
+    padding:30px 0px 0px 0px;
+    z-index:0;
+}
+.navbar-inverse {
+     background: #A3E0A3;
+     color: #007d13;
+}
+
+<<<<<<< HEAD
+=======
+.navbar .navbar-nav {
+  display: inline-block;
+  float: none;
+  vertical-align: top;
+  font-size: center;
+}
+>>>>>>> 73842e1700717f7b30ad4184b0e00286507c0465
+
+.navbar .navbar-collapse {
+  text-align: center;
+  font-size: 30px;
+}
+
+.navbar .nav > li > a {
+    text-decoration: none;
+    color:  #007d13;
+<<<<<<< HEAD
+    margin-right: 20px;
+=======
+    margin-left: 40px;
+    margin-right: 40px;
+>>>>>>> 73842e1700717f7b30ad4184b0e00286507c0465
+}
+
+.navbar-inverse .navbar-nav > .active > a,
+.navbar-inverse .navbar-nav > .active > a:hover,
+.navbar-inverse .navbar-nav > .active > a:focus {
+    color: #007d13;
+    background: #A3E0A3;
+}
+
+.glyphicon-home {
+    font-size: 20px;
+    width: 1em;
+    display:inline-block;
+    margin: -0.5em 5px auto 0px; 
+}
+
+<<<<<<< HEAD
+.glyphicon-log-in {
+    font-size: 20px;
+    width: 1em;
+    display:inline-block;
+    margin: -0.5em 5px auto 0px; 
+}
+
+=======
+>>>>>>> 73842e1700717f7b30ad4184b0e00286507c0465
+.row-content{
+    margin:0px auto;
+    padding: 50px 0px 50px 0px;
+}
+
+
+<<<<<<< HEAD
+=======
+
+>>>>>>> 73842e1700717f7b30ad4184b0e00286507c0465
 /*@media (min-width: 600px)  */
 @media only screen and (min-device-width: 480px){
 	
 	div#groups {width: 33%; float:left; margin-right: 0; margin-left: 0; }
-	div.panel.show {display: block; padding: 2% 2% 10% 2%;}
-	input.accordion {text-align: left; font-size: 150%;}
 	form {font-size: 150%}
-	a.link_homepage {text-decoration:none; font-size:120%; display:inline-block; margin:1% 2% 2% 2%; padding: 1% 4% 1% 4%; 	
-    border-radius: 10px; background-color:#85B885; color: white;}		
+	label {font-size: 100%;}
+	select {color:#009f18 !important; font-size: 80% !important;
+}
+
 }
 
