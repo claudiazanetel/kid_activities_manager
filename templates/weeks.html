@@ -2,28 +2,105 @@
 {% block title %}Weeks{% endblock %}
 
 {% block content %}
-<p>
-<br>Per ogni file caricato puoi vedere l'elenco dei bambini presenti in quella settimana.
-<br> Oppure puoi creare i gruppi come vuoi tu!</br>
-</p>
+<div class="row row row-content">
+<div class="col-xs-12" >
+	<p>
+		<br>Per ogni file caricato puoi vedere l'elenco dei bambini presenti in quella settimana.
+		<br> Oppure puoi creare i gruppi come vuoi tu!</br>
+	</p>
 
-<h4> 
-File inseriti:
-</h4>
+	<h4> 
+		File inseriti :
+	</h4>
+	{% for item in weeks %}
+	<div class="panel-group" id="accordion">
+			
+	  <div class="panel panel-default">
+	    <div class="panel-heading">
+	      <h4 class="panel-title">
+	        <a data-toggle="collapse" data-parent="#accordion" href="#{{ item.week }}">{{ item.week }}</a>
+	      </h4>
+	    </div>
+	    <div id="{{ item.week }}" class="panel-collapse collapse">
+	      	<div class="panel-body">
+      			
+               		<div class="col-xs-12 col-sm-4 col-sm-offset-4">
+                    	<p></p>
+                        <a type="button" class="btn btn btn-success btn-block btn-lg" 
+                        href="/weeks/list/{{ item.week }}" style="text-decoration: none;"
+                        >Elenco bambini</a>
+                        <br>
+               		</div>
+               		<div class="col-xs-12 col-sm-4 col-sm-offset-4">
+                    <p></p>
+                        <a type="button" class="btn btn btn-success btn-block btn-lg" 
+                        data-toggle="modal" data-target="#creategroupsModal" 
+                        onclick="get_value('{{ item.week }}')" style="text-decoration: none;">Crea i gruppi</a> 
+                        <br>         
+                	</div>
+                	<div class="col-xs-12 col-sm-4 col-sm-offset-4">
+                    <p></p>
+                        <a type="button" class="btn btn btn-success btn-block btn-lg" 
+                        style="text-decoration: none;">Cancella il file</a>          
+                	</div>
+	      </div>
+	    </div>
+	  </div>
+	 	 	
+	</div>
+		{% endfor %}
+	        <div id="creategroupsModal" class="modal fade" role="dialog">
+            <div class="modal-dialog">
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h4 class="modal-title">Crea i gruppi</h4>
+                </div>
+                <div class="modal-body" >
+                    <form class="form-horizontal" role="form">
+						<div class="form-group">
+							<div class="col-lg-6 col-lg-offset-3">
+			  					<label for="type_group">Crea i gruppi come vuoi tu:</label>
+			  					<select class="form-control group_type" required="required" >
+			  						<option value="undefined">scegli la tipologia dei gruppi</option>
+			    					<option type="radio" name="type" value ="aged" > Gruppi per et&agrave</option>
+								    <option type="radio" name="type" value="mix" > Gruppi misti</option>
+								</select>
+							</div>
+						</div>
+						<div class="form-group">
+							<div class="col-lg-6 col-lg-offset-3">
+			  					<select class="form-control num_groups" required="required" >
+			  						<option value ="undefined">scegli quanti gruppi</option>
+							    	<option value ="1">1</option>
+							    	<option value="2">2</option>
+							    	<option value="3">3</option>
+							    	<option value="4">4</option>
+							    	<option value="5">5</option>
+							    	<option value="6">6</option>
+							    	<option value="7">7</option>
+							    	<option value="8">8</option>
+							    	<option value="9">9</option>
+							    	<option value="10">10</option>
+								</select>
+							</div>
+						</div>						
+                        <div class="form-group">
+                        	<input type="hidden" id="modal_file">
+                            <input type="button" onclick="create_groups(this)" value="Crea i gruppi">
+                            <button class="btn btn-default" data-dismiss="modal">Cancel</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            </div>
+        </div>
 
-{% for item in weeks %}	
-<input class="accordion" type="button" id = "files" value ="{{ item.week }}">
-<div class="panel">
-	<form>
-	<a href="/weeks/list/{{ item.week }}">Elenco</a><br>
-	<br>Tipologia di gruppo:<br/>
-	<input id = "type_aged" type="radio" name="type" value ="aged"> gruppi per et&agrave<br/>
-  	<input id = "type_mix" type="radio" name="type" value="mix">gruppi misti<br/><br/>
-  	Numero di gruppi:<br/>
-	<input type = "number" name = "n_groups" id = "num_groups" value = "1" min="0" max="99" step= "1" required><br>
-	<br><input type="button" onclick="create_groups()" value="Crea i gruppi"><br>
-	</form> 
 </div>
-{% endfor %}
+</div>
+
+
+
 	
 {% endblock %}
