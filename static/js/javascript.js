@@ -11,8 +11,13 @@ for (i = 0; i < acc.length; i++) {
 }
 }*/
 
-
-function create_groups(button, file) {
+function get_value(name_file){
+    var x=document.getElementById('modal_file');
+    x.setAttribute('value', name_file);
+	
+}
+function create_groups(button) {
+	  var file = document.getElementById('modal_file').value;
 	  var form = button.parentNode.parentNode;
 	  var n_group = form.getElementsByClassName("num_groups")[0].value;
 	  var t_group = form.getElementsByClassName("group_type")[0].value;
@@ -33,12 +38,12 @@ function create_groups(button, file) {
 	  //document.write(type + "  " + n_group );
 	  if (type == undefined){
 		  alert('Attenzione! Ti sei dimenticato di selezionare il tipo di gruppo o il numero di gruppi');
-		  location.href = "/weeks";
+		  //location.href = "/weeks";
 	  }
 	  
 	  else if (n_group == 'undefined'){
 		  alert('Attenzione! Ti sei dimenticato di selezionare il tipo di gruppo o il numero di gruppi');
-		  location.href = "/weeks";
+		  //location.href = "/weeks";
 	  }
 
 	  else{

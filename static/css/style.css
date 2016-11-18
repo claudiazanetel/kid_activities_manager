@@ -6,7 +6,7 @@
 body {background-color: #e7fee7; width: 100%;}
 h1 {color: #009f18; text-align: center; font-size: 60px;
 	 font-style: oblique; text-shadow: 4px 4px #e7fee7;}
-footer#footer {clear: both; padding: 50px 0px 0px 0px;}
+footer#footer {clear: both; padding: 50px 0px 0px 0px; margin-left: 10px; margin-bottom: 10px;}
 div#menu {text-align:center;}
 a.link_homepage {text-decoration:none; font-size:250%; display:inline-block; margin:1% 2% 2% 2%; padding: 1% 4% 1% 4%; 	
   border-radius: 10px; background-color:#85B885; color: white;}	
@@ -58,18 +58,6 @@ div#groups {width: 100%; position: relative;}
 h3:nth-child(odd) { background: #C2FCC2;}
 h3:nth-child(even) { background: #A3E0A3; }
 
-/*input.accordion {background-color: #C2FCC2; color: #009f18; cursor: pointer; padding: 2%; width: 100%;
-    text-align: center; border: none; outline: none; transition: 0.4s; font-size: 250%; }*/
-
-/*input.accordion.active, input.accordion:hover { background-color: #A3E0A3;;}*/
-
-
-/*div.panel {background-color: white; display: none;}*/
-
-
-/*div.panel.show {display: block; padding: 5% 2% 5% 2%; height: 100%; position: relative; }
-input {text-align: center; font-size: 70%;}*/
-
 /*new structure with boostrap*/
 
 .panel-title {
@@ -93,7 +81,7 @@ select {
 select option{
 	 font-size: 150%; color:#009f18;
 }
-
+option:checked { font-weight: bold !important; }
 
 
 
@@ -143,7 +131,6 @@ body{
     margin:0px auto;
     padding: 50px 0px 50px 0px;
 }
-
 
 
 /*@media (min-width: 600px)  */
