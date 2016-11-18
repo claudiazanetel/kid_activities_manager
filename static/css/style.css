@@ -94,12 +94,6 @@ body{
      color: #007d13;
 }
 
-.navbar .navbar-nav {
-  display: inline-block;
-  float: none;
-  vertical-align: top;
-  font-size: center;
-}
 
 .navbar .navbar-collapse {
   text-align: center;
@@ -109,8 +103,7 @@ body{
 .navbar .nav > li > a {
     text-decoration: none;
     color:  #007d13;
-    margin-left: 40px;
-    margin-right: 40px;
+    margin-right: 20px;
 }
 
 .navbar-inverse .navbar-nav > .active > a,
@@ -121,6 +114,13 @@ body{
 }
 
 .glyphicon-home {
+    font-size: 20px;
+    width: 1em;
+    display:inline-block;
+    margin: -0.5em 5px auto 0px; 
+}
+
+.glyphicon-log-in {
     font-size: 20px;
     width: 1em;
     display:inline-block;
