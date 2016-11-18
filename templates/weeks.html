@@ -12,9 +12,15 @@
 	<h4> 
 		File inseriti :
 	</h4>
+<<<<<<< HEAD
 	{% for item in weeks %}
 	<div class="panel-group" id="accordion">
 			
+=======
+	
+	<div class="panel-group" id="accordion">
+		{% for item in weeks %}	
+>>>>>>> 73842e1700717f7b30ad4184b0e00286507c0465
 	  <div class="panel panel-default">
 	    <div class="panel-heading">
 	      <h4 class="panel-title">
@@ -22,6 +28,7 @@
 	      </h4>
 	    </div>
 	    <div id="{{ item.week }}" class="panel-collapse collapse">
+<<<<<<< HEAD
 	      	<div class="panel-body">
       			
                		<div class="col-xs-12 col-sm-4 col-sm-offset-4">
@@ -97,6 +104,53 @@
             </div>
         </div>
 
+=======
+	      <div class="panel-body">
+	      	<div class="row row-content">
+				 <form class="form-horizontal" role="form">
+					<a class = "elenco" href="/weeks/list/{{ item.week }}"> Elenco bambini</a>
+					<br></br>
+					<div class="form-group">
+						<div class="col-lg-6 col-lg-offset-3">
+		  					<label for="type_group">Crea i gruppi come vuoi tu:</label>
+		  					<select class="form-control group_type" required="required" >
+		  						<option value="undefined">scegli la tipologia dei gruppi</option>
+		    					<option type="radio" name="type" value ="aged" > Gruppi per et&agrave</option>
+							    <option type="radio" name="type" value="mix" > Gruppi misti</option>
+							</select>
+						</div>
+						</div>
+					<div class="form-group">
+						<div class="col-lg-6 col-lg-offset-3">
+		  					<select class="form-control num_groups" required="required" >
+		  						<option value ="undefined">scegli quanti gruppi</option>
+						    	<option value ="1">1</option>
+						    	<option value="2">2</option>
+						    	<option value="3">3</option>
+						    	<option value="4">4</option>
+						    	<option value="5">5</option>
+						    	<option value="6">6</option>
+						    	<option value="7">7</option>
+						    	<option value="8">8</option>
+						    	<option value="9">9</option>
+						    	<option value="10">10</option>
+							</select>
+						</div>
+					</div>
+					<div class="form-group">
+						<input type="button" onclick="create_groups(this, '{{ item.week }}')" value="Crea i gruppi">
+						<br>
+					</div>		
+				</form>
+			</div> 
+	      </div>
+	    </div>
+	  </div>
+	 	{% endfor %}
+	</div>
+	<span id="log"></span>
+	 
+>>>>>>> 73842e1700717f7b30ad4184b0e00286507c0465
 </div>
 </div>
 
