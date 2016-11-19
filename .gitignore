@@ -5,3 +5,4 @@ lib/
 *.pyc
 .data
 .settings
+appengine_keyfile.json
