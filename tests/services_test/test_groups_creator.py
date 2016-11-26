@@ -56,6 +56,3 @@ class TestGroupsCreator(unittest.TestCase):
         self.assertEqual(1908, result[3][0].dob.year)
         self.assertEqual(1907, result[4][0].dob.year)
         self.assertEqual(1907, result[5][0].dob.year)
-
-if __name__ == '__main__':
-    unittest.main()

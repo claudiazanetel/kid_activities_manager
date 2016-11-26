@@ -6,3 +6,5 @@ lib/
 .data
 .settings
 appengine_keyfile.json
+.coverage
+htmlcov
