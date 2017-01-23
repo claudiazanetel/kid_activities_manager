@@ -1,0 +1,24 @@
+engines:
+  pep8:
+    enabled: true
+  eslint:
+    enabled: true
+  duplication:
+    enabled: true
+  csslint:
+    enabled: true
+
+ratings:
+  paths:
+    - "**.py"
+    - "**.js"
+    - "**.css"
+
+exclude_paths:
+  - lib/**/*
+  - static/css/bootstrap*
+  - static/css/font*
+  - static/fonts/*
+  - static/image/*
+  - js/bootstrap*
+  - js/npm.js
