@@ -24,5 +24,5 @@ exclude_paths:
   - static/css/font*
   - static/fonts/*
   - static/image/*
-  - js/bootstrap*
-  - js/npm.js
+  - static/js/bootstrap*
+  - static/js/npm.js
