@@ -22,7 +22,7 @@ class GroupsCreator(object):
         GroupsCreator.sort(participants)
 
         n_children = len(participants)/n_groups
-        children_out = len(participants)%n_groups
+        children_out = len(participants) % n_groups
 
         groups = []
 
@@ -44,7 +44,7 @@ class GroupsCreator(object):
         for index in range(n_groups):
             groups.append([])
             for i in range(n_children):
-                groups[index].append(participants[(i*n_groups)+ index])
+                groups[index].append(participants[(i * n_groups) + index])
 
         for j in range(children_out):
             groups[-1-j].append(participants[-1-j])

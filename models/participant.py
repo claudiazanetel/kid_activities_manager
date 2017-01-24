@@ -1,6 +1,7 @@
 
 class Participant(object):
-    
+
+
     def __init__(self, name, dob, week):
         self.name = name
         self.dob = dob

@@ -35,7 +35,7 @@ def single_week(week):
     return render_template(
         'week_list.html',
         participants=participantService.get_participants_by_week(week),
-        week = week)
+        week=week)
         
 @app.route('/transform', methods=["POST"])
 def transform_action():
@@ -54,7 +54,7 @@ def create_groups(week, type, n_groups):
     elif group_type == GroupsCreator.MIXED_TYPE:
         groups = GroupsCreator.mixed(participants, int(n_groups))
     else:
-        logging.exception('The type '+ group_type +' is invalid')
+        logging.exception('The type ' + group_type + ' is invalid')
         return 'The type is not valid', 400
 
     return render_template('groups.html', groups=groups)
