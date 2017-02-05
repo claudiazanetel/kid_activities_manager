@@ -5,6 +5,7 @@ from models.model_mapper import ModelMapper
 
 class ParticipantDAO:
 
+
     def get_weeks_list(self):
         '''
         Retrieves all the distinct weeks from the database
@@ -34,4 +35,7 @@ class ParticipantDAO:
             participant.put()
             return participant
 
-        raise ValueError("The given participant is not of a valid type: " + str(type(participant)) + "\n allowed: " + str(type(Participant("a","a","a"))))
+        raise ValueError("The given participant is not of a valid type: " + 
+            str(type(participant)) + 
+            "\n allowed: " + 
+            str(type(Participant("a", "a", "a"))))
