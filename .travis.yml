@@ -5,6 +5,9 @@ install:
   - pip install mock
   - pip install coverage
   - pip install python-coveralls
+before_script: 
+  - npm install -g bower
+  - bower install
 script:
   - coverage run --omit="tests/*","*/__init__.py","*/mock.py" -m unittest discover tests
 after_success:
