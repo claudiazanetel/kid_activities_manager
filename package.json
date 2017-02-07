@@ -1,0 +1,30 @@
+{
+  "name": "kid_activities_manager",
+  "version": "1.0.0",
+  "description": "[![Build Status](https://travis-ci.org/claudiazanetel/kid_activities_manager.svg?branch=master)](https://travis-ci.org/claudiazanetel/kid_activities_manager) \r [![Coverage Status](https://coveralls.io/repos/github/claudiazanetel/kid_activities_manager/badge.svg?branch=master)](https://coveralls.io/github/claudiazanetel/kid_activities_manager?branch=master) \r [![Code Climate](https://codeclimate.com/github/claudiazanetel/kid_activities_manager/badges/gpa.svg)](https://codeclimate.com/github/claudiazanetel/kid_activities_manager)",
+  "main": "gulpfile.js",
+  "directories": {
+    "test": "tests"
+  },
+  "dependencies": {
+    "bower": "^1.8.0",
+    "gulp": "^3.9.1"
+  },
+  "devDependencies": {
+    "gulp-bower": "0.0.13"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/claudiazanetel/kid_activities_manager.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/claudiazanetel/kid_activities_manager/issues"
+  },
+  "homepage": "https://github.com/claudiazanetel/kid_activities_manager#readme"
+}

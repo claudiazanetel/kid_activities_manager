@@ -7,3 +7,6 @@ handlers:
   static_dir: static
 - url: /.*
   script: main.app
+
+skip_files:
+ - ^node_modules$
