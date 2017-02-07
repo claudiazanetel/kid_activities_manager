@@ -8,6 +8,8 @@ install:
 before_script: 
   - npm install -g bower
   - bower install
+  - npm install
+  - gulp
 script:
   - coverage run --omit="tests/*","*/__init__.py","*/mock.py" -m unittest discover tests
 after_success:
@@ -21,3 +23,5 @@ deploy:
   keyfile: appengine_keyfile.json
   project: gioca-estate
   on: master
+
+  
