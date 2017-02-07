@@ -6,8 +6,6 @@ install:
   - pip install coverage
   - pip install python-coveralls
 before_script: 
-  - npm install -g bower
-  - bower install
   - npm install
   - gulp
 script:
@@ -24,4 +22,3 @@ deploy:
   project: gioca-estate
   on: master
 
-  
