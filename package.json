@@ -8,7 +8,8 @@
   },
   "dependencies": {
     "bower": "^1.8.0",
-    "gulp": "^3.9.1"
+    "gulp": "^3.9.1",
+    "gulp-clean-css": "^3.0.0"
   },
   "devDependencies": {
     "gulp-bower": "0.0.13"
