@@ -4,34 +4,75 @@ var cleanCSS = require('gulp-clean-css');
 var minify = require('gulp-minify');
 var concat = require('gulp-concat');  
 var rename = require('gulp-rename');
+var del = require('del');
 
 //Default task
-gulp.task('default', ['bower', 'minify-css','minify-js']);  
+gulp.task('default', ['clean']);  
 
+/*
+* downloads front-end dependencies
+*/
 gulp.task('bower', function() {
- 	return bower('./static/dist/components')
+    return bower('./tmp/components')
 });
 
-gulp.task('minify-css', function() {
-  	return gulp.src([
-  		'./static/css/style.css'
-  	])
-	.pipe(concat('site.css'))
-    .pipe(gulp.dest('./static/dist/css'))
-    .pipe(rename('site-min.css'))
+/*
+* minifies the site css
+*/
+gulp.task('minify-site-css', function() {
+    return gulp.src([
+        './assets/css/style.css'
+    ])
     .pipe(cleanCSS())
-    .pipe(gulp.dest('./static/dist/css'));
+    .pipe(gulp.dest('./tmp/css'));
 });
 
-gulp.task('minify-js', function() {
-  	return gulp.src([
-  		'./static/dist/components/jquery/dist/jquery.js',
-  		'./static/dist/components/bootstrap/dist/js/bootstrap.js',
-  		'./static/js/javascript.js'
-	])
+/*
+* concatenates the minified site css with the dependecies (bootstrap, ...) 
+*/
+gulp.task('concat-css', ['bower', 'minify-site-css'], function() {
+    return gulp.src([
+        './tmp/components/bootstrap/dist/css/bootstrap.min.css',
+        './tmp/css/style.css'
+    ])
+    .pipe(concat('site.min.css'))
+    .pipe(gulp.dest('./static/css'))
+});
+
+/*
+* copies images into the static folder
+*/
+gulp.task('copy-fonts', ['bower'], function() {
+    return gulp.src(['./tmp/components/bootstrap/dist/fonts/**/**']).pipe(gulp.dest('./static/fonts'));
+});
+
+/*
+* concatenates and minifies javascript files
+*/
+gulp.task('minify-js', ['bower'], function() {
+    return gulp.src([
+        './tmp/components/jquery/dist/jquery.js',
+        './tmp/components/bootstrap/dist/js/bootstrap.js',
+        './assets/js/javascript.js'
+    ])
     .pipe(concat('site.js'))
-    .pipe(gulp.dest('./static/dist/js'))
-    //.pipe(rename('site.js'))
-    .pipe(minify())
-    .pipe(gulp.dest('./static/dist/js'))
+    .pipe(gulp.dest('./tmp/js'))
+    .pipe(minify({ext: ".min.js"}))
+    .pipe(gulp.dest('./static/js'))
+});
+
+/*
+* copies images into the static folder
+*/
+gulp.task('copy-images', function() {
+    return gulp.src(['./assets/image/**/*']).pipe(gulp.dest('./static/image'));
+});
+
+/*
+* cleans temporary files
+*/
+gulp.task('clean', ['concat-css', 'minify-js', 'copy-images', 'copy-fonts'], function() {
+    return del([
+        './tmp'
+    ]);
 });

@@ -9,4 +9,4 @@ appengine_keyfile.json
 .coverage
 htmlcov
 node_modules/
-static/dist/
+static/
